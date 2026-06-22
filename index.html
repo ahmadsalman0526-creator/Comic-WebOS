@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stardance Cosmic WebOS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="desktop">
+        
+        <div id="central-hub">
+            <div class="search-container">
+                <span class="search-icon"></span>
+                <input type="text" id="desktop-search" placeholder="Type 'stardance', 'hackclub', or 'open calc'...">
+            </div>
+            
+            <div class="shortcuts-grid">
+                <div class="desktop-icon" data-app="notepad">
+                    
+                    <span class="icon-text">Notepad</span>
+                </div>
+                <div class="desktop-icon" data-app="calc">
+                    
+                    <span class="icon-text">Calculator</span>
+                </div>
+                <div class="desktop-icon" data-app="browser">
+                    
+                    <span class="icon-text">Browser</span>
+                </div>
+                <div class="desktop-icon" data-app="settings">
+                    
+                    <span class="icon-text">Settings</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="window" id="win-notepad">
+            <div class="window-header">
+                <span class="window-title"> Cosmic Notes</span>
+                <div class="window-controls">
+                    <button class="win-btn min-btn">&#9472;</button>
+                    <button class="win-btn close-btn">&times;</button>
+                </div>
+            </div>
+            <div class="window-body">
+                <textarea id="notepad-input" placeholder="Write your ideas here... (Auto-saves to local storage!)"></textarea>
+            </div>
+        </div>
+
+        <div class="window" id="win-calc">
+            <div class="window-header">
+                <span class="window-title">ðŸ”¢ Quantum Calc</span>
+                <div class="window-controls">
+                    <button class="win-btn min-btn">&#9472;</button>
+                    <button class="win-btn close-btn">&times;</button>
+                </div>
+            </div>
+            <div class="window-body calc-container">
+                <input type="text" id="calc-display" readonly value="0">
+                <div class="calc-buttons">
+                    <button class="c-btn clear">C</button>
+                    <button class="c-btn op">/</button>
+                    <button class="c-btn op">*</button>
+                    <button class="c-btn op">-</button>
+                    <button class="c-btn">7</button>
+                    <button class="c-btn">8</button>
+                    <button class="c-btn">9</button>
+                    <button class="c-btn op">+</button>
+                    <button class="c-btn">4</button>
+                    <button class="c-btn">5</button>
+                    <button class="c-btn">6</button>
+                    <button class="c-btn equal">=</button>
+                    <button class="c-btn">1</button>
+                    <button class="c-btn">2</button>
+                    <button class="c-btn">3</button>
+                    <button class="c-btn zero">0</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="window" id="win-browser">
+            <div class="window-header">
+                <span class="window-title"> Deepspace Navigation</span>
+                <div class="window-controls">
+                    <button class="win-btn min-btn">&#9472;</button>
+                    <button class="win-btn close-btn">&times;</button>
+                </div>
+            </div>
+            <div class="window-body browser-container">
+                <div class="browser-address-bar">
+                    <input type="text" id="browser-url" value="https://www.wikipedia.org">
+                    <button id="browser-go-btn">Launch</button>
+                </div>
+                <iframe id="browser-viewport"></iframe>
+            </div>
+        </div>
+
+        <div class="window" id="win-settings">
+            <div class="window-header">
+                <span class="window-title">¸ Desktop Engine Settings</span>
+                <div class="window-controls">
+                    <button class="win-btn min-btn">&#9472;</button>
+                    <button class="win-btn close-btn">&times;</button>
+                </div>
+            </div>
+            <div class="window-body settings-container">
+                <h3>Nebula Custom Background Picker</h3>
+                <div class="theme-picker-grid">
+                    <button class="theme-opt" data-color="linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #311042 100%)" style="background:#1e1b4b;"></button>
+                    <button class="theme-opt" data-color="linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%)" style="background:#1e3a8a;"></button>
+                    <button class="theme-opt" data-color="linear-gradient(135deg, #581c87 0%, #111827 100%)" style="background:#581c87;"></button>
+                    <button class="theme-opt" data-color="linear-gradient(135deg, #032b30 0%, #071112 100%)" style="background:#032b30;"></button>
+                </div>
+            </div>
+        </div>
+
+        <div id="start-menu">
+            <div class="start-banner">
+                <div class="banner-text">STARDANCE OS</div>
+            </div>
+            <div class="start-options">
+                <div class="menu-link" data-app="notepad"> Open Notes</div>
+                <div class="menu-link" data-app="calc"> Open Calculator</div>
+                <div class="menu-link" data-app="browser"> Open Browser</div>
+                <div class="menu-link" data-app="settings">Settings Engine</div>
+                <div class="menu-separator"></div>
+                <div class="menu-link danger-action" id="action-power">Shutdown Environment</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="taskbar">
+        <button id="start-trigger"> Start</button>
+        <div id="running-tasks"></div>
+        <div id="system-status">
+            <span id="os-clock">00:00:00 AM</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
